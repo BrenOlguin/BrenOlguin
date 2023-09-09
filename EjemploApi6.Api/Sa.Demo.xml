@@ -1,0 +1,176 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EjemploApi6.Api</name>
+    </assembly>
+    <members>
+        <member name="T:EjemploApi6.Api.Controllers.DemoController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EjemploApi6.Api.Controllers.DemoController.#ctor(Microsoft.Extensions.Logging.ILogger{EjemploApi6.Api.Controllers.DemoController},MediatR.IMediator)">
+            <summary>
+            
+            </summary>
+            <param name="logger"></param>
+            <param name="mediator"></param>
+        </member>
+        <member name="M:EjemploApi6.Api.Controllers.DemoController.Get">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:EjemploApi6.Api.Filters.ExceptionsAttribute">
+            <summary>
+            ExceptionsAttribute
+            </summary>
+        </member>
+        <member name="M:EjemploApi6.Api.Filters.ExceptionsAttribute.#ctor(Correlate.ICorrelationContextAccessor)">
+            <summary>
+            ExceptionsAttribute
+            </summary>
+            <param name="correlation"></param>
+        </member>
+        <member name="M:EjemploApi6.Api.Filters.ExceptionsAttribute.OnException(Microsoft.AspNetCore.Mvc.Filters.ExceptionContext)">
+            <summary>
+            OnException
+            </summary>
+            <param name="context"></param>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="T:EjemploApi6.Api.Filters.ModelStateValidateAttribute">
+            <summary>
+            ModelStateValidateAttribute
+            </summary>
+        </member>
+        <member name="M:EjemploApi6.Api.Filters.ModelStateValidateAttribute.#ctor(Correlate.ICorrelationContextAccessor)">
+            <summary>
+            ModelStateValidateAttribute
+            </summary>
+        </member>
+        <member name="M:EjemploApi6.Api.Filters.ModelStateValidateAttribute.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)">
+            <summary>
+            OnActionExecuting
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:EjemploApi6.Api.Middleware.RequestResponseLoggingMiddleware">
+            <summary>
+            RequestResponseLoggingMiddleware
+            </summary>
+        </member>
+        <member name="M:EjemploApi6.Api.Middleware.RequestResponseLoggingMiddleware.#ctor(Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            RequestResponseLoggingMiddleware
+            </summary>
+            <param name="loggerFactory"></param>
+        </member>
+        <member name="M:EjemploApi6.Api.Middleware.RequestResponseLoggingMiddleware.InvokeAsync(Microsoft.AspNetCore.Http.HttpContext,Microsoft.AspNetCore.Http.RequestDelegate)">
+            <summary>
+            InvokeAsync
+            </summary>
+            <param name="context"></param>
+            <param name="next"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EjemploApi6.Api.Middleware.RequestResponseLoggingMiddlewareExtensions">
+            <summary>
+            RequestResponseLoggingMiddlewareExtensions
+            </summary>
+        </member>
+        <member name="M:EjemploApi6.Api.Middleware.RequestResponseLoggingMiddlewareExtensions.UseRequestResponseLogging(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            UseRequestResponseLogging
+            </summary>
+            <param name="builder"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EjemploApi6.Api.Models.Error">
+            <summary>
+            Error
+            </summary>
+        </member>
+        <member name="P:EjemploApi6.Api.Models.Error.Code">
+            <summary>
+            Codigo
+            </summary>
+        </member>
+        <member name="P:EjemploApi6.Api.Models.Error.Title">
+            <summary>
+            Titulo
+            </summary>
+        </member>
+        <member name="P:EjemploApi6.Api.Models.Error.Detail">
+            <summary>
+            Detalle
+            </summary>
+        </member>
+        <member name="T:EjemploApi6.Api.Models.ErrorDetailModel">
+            <summary>
+            Detalle de error model
+            </summary>
+        </member>
+        <member name="M:EjemploApi6.Api.Models.ErrorDetailModel.#ctor">
+            <summary>
+            ErrorDetailModel
+            </summary>
+        </member>
+        <member name="P:EjemploApi6.Api.Models.ErrorDetailModel.EventId">
+            <summary>
+            Descripción del código de error Http
+            </summary>
+        </member>
+        <member name="P:EjemploApi6.Api.Models.ErrorDetailModel.Detail">
+            <summary>
+            Detalle del error
+            </summary>
+        </member>
+        <member name="P:EjemploApi6.Api.Models.ErrorDetailModel.CorrelationId">
+            <summary>
+            Correlation Id
+            </summary>
+        </member>
+        <member name="P:EjemploApi6.Api.Models.ErrorDetailModel.Errors">
+            <summary>
+            Lista de errores
+            </summary>
+        </member>
+        <member name="T:EjemploApi6.Api.Swagger.SwaggerGenSettings">
+            <summary>
+            SwaggerDefaultValues
+            </summary>
+        </member>
+        <member name="M:EjemploApi6.Api.Swagger.SwaggerGenSettings.AddSwaggerGenForService(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            AddSwaggerGen
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="T:EjemploApi6.Api.Swagger.SwaggerOperationFilter">
+            <summary>
+            SwaggerOperationFilter
+            </summary>
+        </member>
+        <member name="M:EjemploApi6.Api.Swagger.SwaggerOperationFilter.Apply(Microsoft.OpenApi.Models.OpenApiOperation,Swashbuckle.AspNetCore.SwaggerGen.OperationFilterContext)">
+            <summary>
+            Applies the filter to the specified operation using the given context.
+            </summary>
+            <param name="operation">The operation to apply the filter to.</param>
+            <param name="context">The current operation filter context.</param>
+        </member>
+        <member name="T:EjemploApi6.Api.Swagger.SwaggerUiSettings">
+            <summary>
+            SwaggerUiSettings Class
+            </summary>
+        </member>
+        <member name="M:EjemploApi6.Api.Swagger.SwaggerUiSettings.SwaggerOptionUi(Microsoft.AspNetCore.Mvc.ApiExplorer.IApiVersionDescriptionProvider,Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIOptions)">
+            <summary>
+            Configuracion de la UI de swagger
+            </summary>
+            <param name="provider"></param>
+            <param name="options"></param>
+        </member>
+    </members>
+</doc>
