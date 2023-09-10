@@ -29,6 +29,16 @@
             
             </summary>
         </member>
+        <member name="T:EjemploApi6.Api.Automapper.ModificarPersona">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:EjemploApi6.Api.Automapper.ModificarPersona.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="T:EjemploApi6.Api.Clients.HttpClientServiceExtension">
             <summary>
             HttpClientService Extension for Service Injection
@@ -89,6 +99,12 @@
             <returns></returns>
         </member>
         <member name="M:EjemploApi6.Api.Controllers.PersonaController.GetPersonas">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EjemploApi6.Api.Controllers.PersonaController.ModificarPersona(EjemploApi6.Api.ViewModels.ModificarPersona.Input.ModificarPersonaViewModel)">
             <summary>
             
             </summary>
@@ -300,6 +316,46 @@
             </summary>
         </member>
         <member name="T:EjemploApi6.Api.ViewModels.GetPersonas.Output.GetPersonasViewModelResponse">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:EjemploApi6.Api.ViewModels.ModificarPersona.Input.ModificarPersonaViewModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EjemploApi6.Api.ViewModels.ModificarPersona.Input.ModificarPersonaViewModel.Id">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EjemploApi6.Api.ViewModels.ModificarPersona.Input.ModificarPersonaViewModel.Dni">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EjemploApi6.Api.ViewModels.ModificarPersona.Input.ModificarPersonaViewModel.Nombre">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EjemploApi6.Api.ViewModels.ModificarPersona.Input.ModificarPersonaViewModel.Apellido">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EjemploApi6.Api.ViewModels.ModificarPersona.Input.ModificarPersonaViewModel.Edad">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:EjemploApi6.Api.ViewModels.ModificarPersona.Input.ModificarPersonaViewModel.Nacionalidad">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:EjemploApi6.Api.ViewModels.ModificarPersona.Output.ModificarPersonaViewModelResponse">
             <summary>
             
             </summary>

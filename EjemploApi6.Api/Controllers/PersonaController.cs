@@ -4,6 +4,8 @@ using EjemploApi6.Api.ViewModels.CrearPersona.Input;
 using EjemploApi6.Api.ViewModels.CrearPersona.Output;
 using EjemploApi6.Api.ViewModels.GetDemo.Output;
 using EjemploApi6.Api.ViewModels.GetPersonas.Output;
+using EjemploApi6.Api.ViewModels.ModificarPersona.Input;
+using EjemploApi6.Api.ViewModels.ModificarPersona.Output;
 using EjemploApi6.Application.Commands;
 using EjemploApi6.Application.Queries;
 using MediatR;
@@ -82,6 +84,24 @@ public class PersonaController : ControllerBase
         return Ok(viewModelResponse);
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <returns></returns>
+    [HttpPut("persona")]
+    [SwaggerOperation(Summary = "Modificar datos de una persona.", Tags = new[] { "persona" })]
+    [ProducesResponseType(typeof(ModificarPersonaViewModelResponse), StatusCodes.Status200OK)]
+    [Produces(MediaTypeNames.Application.Json, "application/problem+json")]
+    public async Task<IActionResult> ModificarPersona(ModificarPersonaViewModel model)
+    {
+        _logger.LogDebug("entering to modificar personas controller");
+
+        var response = await _mediator.Send(new ModificarPersonaCommand(model.Id,model.Dni,model.Nombre,model.Apellido,model.Edad,model.Nacionalidad));
+
+        var viewModelResponse = _mapper.Map<ModificarPersonaViewModelResponse>(response);
+
+        return Ok(viewModelResponse);
+    }
 
 
 }
